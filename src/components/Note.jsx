@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import note from '../note'
 
-function Footer(){
+function Note(params){
     return <div className='note'>
-    <h1>Title</h1>
-    <p>This is description</p>
+    <h1>{params.title}</h1>
+    <p>{params.content}</p>
     </div>
 };
 
-export default Footer;
+export default Note;
 
