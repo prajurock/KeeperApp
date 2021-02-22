@@ -1,12 +1,18 @@
-import React from 'react';
-import note from '../note'
+import DeleteIcon from '@material-ui/icons/Delete';
+import React from "react";
 
-function Note(params){
-    return <div className='note'>
-    <h1>{params.title}</h1>
-    <p>{params.content}</p>
+function Note(props) {
+  function handleClick() {
+    props.onDelete(props.id);
+  }
+
+  return (
+    <div className="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={handleClick}><DeleteIcon/></button>
     </div>
-};
+  );
+}
 
 export default Note;
-
